@@ -103,13 +103,6 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>oss-licenses</artifactId>
-      <version>${oss-licenses.version}</version>
-      <scope>runtime</scope>
-      <type>zip</type>
-    </dependency>
-    <dependency>
       <groupId>jakarta.annotation</groupId>
       <artifactId>jakarta.annotation-api</artifactId>
       <version>${jakarta-annotaion-api.version}</version>
@@ -274,14 +267,6 @@
                   <artifactId>pentaho-metastore-locator-plugin</artifactId>
                   <version>${pdi.version}</version>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
-                  <type>zip</type>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>pentaho</groupId>
-                  <artifactId>oss-licenses</artifactId>
-                  <version>${oss-licenses.version}</version>
-                  <includes>PentahoMetadata**</includes>
-                  <outputDirectory>${project.build.directory}/oss-licenses</outputDirectory>
                   <type>zip</type>
                 </artifactItem>
               </artifactItems>
