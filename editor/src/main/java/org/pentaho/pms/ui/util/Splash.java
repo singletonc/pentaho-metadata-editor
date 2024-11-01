@@ -197,7 +197,10 @@ public class Splash {
 
     shell.addDisposeListener( disposeEvent -> {
 
-      aboutScreenImage.dispose();
+      //dispose of the image only once the program is closed
+      if( ( (Shell) disposeEvent.widget ).getParent() == null ) {
+        aboutScreenImage.dispose();
+      }
       verFont.dispose();
       licFont.dispose();
 
