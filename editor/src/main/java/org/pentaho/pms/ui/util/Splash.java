@@ -18,7 +18,7 @@
 package org.pentaho.pms.ui.util;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.FileReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -135,8 +135,7 @@ public class Splash {
       String line;
       try {
         BufferedReader reader =
-          new BufferedReader( new InputStreamReader( Splash.class.getClassLoader().getResourceAsStream(
-            "org/pentaho/pms/ui/dialog/license.txt" ) ) );
+          new BufferedReader( new FileReader( "./license/license.txt" ));
 
         while ( ( line = reader.readLine() ) != null ) {
           sb.append( line + System.getProperty( "line.separator" ) );
