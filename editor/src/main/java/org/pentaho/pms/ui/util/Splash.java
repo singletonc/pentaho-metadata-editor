@@ -137,6 +137,8 @@ public class Splash {
         BufferedReader reader =
           new BufferedReader( new FileReader( "./license/license.txt" ));
 
+        //TODO if cannot find, present a message "Cannot find license file in license directory."
+
         while ( ( line = reader.readLine() ) != null ) {
           sb.append( line + System.getProperty( "line.separator" ) );
         }
